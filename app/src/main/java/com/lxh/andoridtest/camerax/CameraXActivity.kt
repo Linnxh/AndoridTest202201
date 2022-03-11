@@ -56,6 +56,7 @@ typealias LumaListener = (luma: Double) -> Unit
 //    }
 //}
 
+
 class CameraXActivity : AppCompatActivity() {
     private lateinit var viewBinding: ActivityCameraXBinding
 
