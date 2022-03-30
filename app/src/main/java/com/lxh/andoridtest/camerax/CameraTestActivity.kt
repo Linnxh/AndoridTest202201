@@ -17,6 +17,12 @@ import java.io.File
 
 /**
  * 拍照功能 ---> 测试页面
+ *
+ * camera2 代替了 camera
+ * camerax 基于 camera2, 提供了相对简洁的代码，适用于简单的拍照和录制视频（camera2可实现更多的自定义功能）
+ * 遗留问题
+ * TODO: 鲁班压缩不支持 设置输出后的文件名称 可采用其他扩展库进行优化
+ * TODO: 可在页面上 增加切换摄像头按钮的操作
  */
 class CameraTestActivity : AppCompatActivity() {
 
@@ -61,7 +67,7 @@ class CameraTestActivity : AppCompatActivity() {
     }
 
     fun compressImg(file: File) {
-        // TODO: 不支持 设置输出后的文件名称
+
         Luban.with(this)
             .load(file)
             .ignoreBy(100)
